@@ -32,11 +32,11 @@ We used two datasets from Kaggle:
 1.	Chest X-Ray Images (Pneumonia) [1]
 2.	Pediatric Pneumonia Chest X-Rays [2]
 ### Statistics
-•	Images split into training (80%), validation (10%), and test (10%).
-•	Class distribution: Normal, Bacterial Pneumonia, Viral Pneumonia.
+1. Images split into training (80%), validation (10%), and test (10%).
+2. Class distribution: Normal, Bacterial Pneumonia, Viral Pneumonia.
 ### Implementation
-•	Frameworks: PyTorch and TensorFlow for model implementation.
-•	Models: CNN, ResNet, DenseNet, and GAN.
+1. Frameworks: PyTorch and TensorFlow for model implementation.
+2.Models: CNN, ResNet, DenseNet, and GAN.
 •	Hardware: Experiments were conducted on a GPU-enabled machine.
 ### Model Architectures
 •	CNN: Sequential convolutional layers with ReLU activations and max pooling.
