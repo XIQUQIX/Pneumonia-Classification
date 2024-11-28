@@ -36,12 +36,12 @@ We used two datasets from Kaggle:
 2. Class distribution: Normal, Bacterial Pneumonia, Viral Pneumonia.
 ### Implementation
 1. Frameworks: PyTorch and TensorFlow for model implementation.
-2.Models: CNN, ResNet, DenseNet, and GAN.
-•	Hardware: Experiments were conducted on a GPU-enabled machine.
+2. Models: CNN, ResNet, DenseNet, and GAN.
+3. Hardware: Experiments were conducted on a GPU-enabled machine.
 ### Model Architectures
-•	CNN: Sequential convolutional layers with ReLU activations and max pooling.
-•	ResNet/DenseNet: Architectures with skip connections or dense blocks for deeper feature extraction.
-•	GAN: Generator and discriminator networks trained adversarially to augment data.
+1.	CNN: Sequential convolutional layers with ReLU activations and max pooling.
+2.	ResNet/DenseNet: Architectures with skip connections or dense blocks for deeper feature extraction.
+3.	GAN: Generator and discriminator networks trained adversarially to augment data.
 
 ## Experiment Results
 ### Main Results
@@ -49,24 +49,24 @@ We used two datasets from Kaggle:
 2.	ResNets and DenseNets performed well in distinguishing bacterial from viral pneumonia, and both achieved approximately 75% accuracy. 
 3.	GANs improved synthetic data augmentation but did not significantly enhance triple-class results. Triple classification performance plateaued at around 70% accuracy.
 ### Supplementary Results
-•	Parameter tuning revealed optimal learning rates and batch sizes for each model.
-•	Data augmentation techniques do improve the transfer learning model a bit.
-•	Applying a dummy class for classification job in ResNet proves meaningless.
+1.	Parameter tuning revealed optimal learning rates and batch sizes for each model.
+2.	Data augmentation techniques do improve the transfer learning model a bit.
+3.	Applying a dummy class for classification job in ResNet proves meaningless.
 
 ## Discussion
 ### Insights
-•	Binary classification tasks benefit significantly from deep learning models.
-•	Differentiating bacterial from viral pneumonia is challenging due to subtle visual differences.
-•	The GAN model needs to adjust a wide range of parameters and it is tough to converge. Thus, further funding is strongly required.
+1.	Binary classification tasks benefit significantly from deep learning models.
+2.	Differentiating bacterial from viral pneumonia is challenging due to subtle visual differences.
+3.	The GAN model needs to adjust a wide range of parameters and it is tough to converge. Thus, further funding is strongly required.
 
 ### Limitations
-•	Class imbalance, too much bacterial pneumonia data with too little viral pneumonia data, in the dataset affected triple-class classification performance.
-•	Difficulty in distinguishing bacterial from viral pneumonia due to overlapping radiological features.
+1.	Class imbalance, too much bacterial pneumonia data with too little viral pneumonia data, in the dataset affected triple-class classification performance.
+2.	Difficulty in distinguishing bacterial from viral pneumonia due to overlapping radiological features.
 
 ### Future Work
-•	Implement attention mechanisms to focus on region-specific features in X-rays.
-•	Explore pre-training on larger datasets or additional augmentation techniques.
-•	Collaborate with radiologists to integrate clinical context into the classification pipeline.
+1.	Implement attention mechanisms to focus on region-specific features in X-rays.
+2.	Explore pre-training on larger datasets or additional augmentation techniques.
+3.	Collaborate with radiologists to integrate clinical context into the classification pipeline.
 
 ## Conclusion
 This project demonstrates the efficacy of deep learning models for pneumonia classification using chest X-rays. While binary tasks achieve robust performance, multi-class classification remains challenging, highlighting opportunities for further research into feature extraction and augmentation.
