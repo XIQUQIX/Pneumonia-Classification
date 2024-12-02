@@ -4,7 +4,7 @@ Teammates: Rongjia Sun, Churou Deng
 
 ## How to use
 1. Prepare an environment with Jupyter Notebook and PyTorch
-2. Download dataset in textbf{dataset} file or at [https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia] and [https://www.kaggle.com/datasets/andrewmvd/pediatric-pneumonia-chest-xray]
+2. Download dataset in dataset file or at [https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia] and [https://www.kaggle.com/datasets/andrewmvd/pediatric-pneumonia-chest-xray]
 3. Run CNN/CNN.ipynb or CNN/CNN_bin_classifier.ipynb to implement CNN for binary classification between normal and pneumonia on dataset chest-xray-pneumonia
 4. Run Transfer_Learning/Transfer_Learning_dense.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset chest-xray-pneumonia
 5. Run Transfer_Learning/Transfer_Learning_dense_pediatric.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset pediatric-pneumonia-chest-xray
