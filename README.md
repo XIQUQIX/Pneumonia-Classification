@@ -97,6 +97,8 @@ Chest X-ray images (anterior-posterior) were selected from retrospective cohorts
 1.	Binary classification tasks benefit significantly from deep learning models.
 2.	Differentiating bacterial from viral pneumonia is challenging due to subtle visual differences.
 3.	The GAN model needs to adjust a wide range of parameters and it is tough to converge. Thus, further funding is strongly required.
+4.	Our experiments demonstrated that our CNN model achieved results approximately 10% better than those found in existing Kaggle code implementations. This highlights the effectiveness of our optimized training process, including techniques such as gradient stabilization and tailored data augmentation.
+5.	Additionally, while most publicly available implementations focus solely on binary classification (distinguishing between normal and pneumonia cases), our work goes a step further by exploring multi-class classification to differentiate between bacterial and viral pneumonia. This is an area with limited prior research or publicly available benchmarks, making our contributions particularly noteworthy in addressing this gap.
 
 ### Limitations
 1.	Class imbalance, too much bacterial pneumonia data with too little viral pneumonia data, in the dataset affected triple-class classification performance.
@@ -106,6 +108,7 @@ Chest X-ray images (anterior-posterior) were selected from retrospective cohorts
 1.	Implement attention mechanisms to focus on region-specific features in X-rays.
 2.	Explore pre-training on larger datasets or additional augmentation techniques.
 3.	Collaborate with radiologists to integrate clinical context into the classification pipeline.
+4.	While our models achieved promising results in distinguishing normal cases from pneumonia, the classification of pneumonia types (bacterial vs. viral) remains a significant challenge. The current performance highlights the inherent difficulty in differentiating between these two types, likely due to the subtle radiological differences and potential dataset limitations. Future work will focus on developing more advanced modeling techniques and conducting extensive experiments to address this issue.
 
 ## Conclusion
 This project demonstrates the efficacy of deep learning models for pneumonia classification using chest X-rays. While binary tasks achieve robust performance, multi-class classification remains challenging, highlighting opportunities for further research into feature extraction and augmentation.
