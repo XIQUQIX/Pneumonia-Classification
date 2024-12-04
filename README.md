@@ -39,7 +39,9 @@ This project addresses the automated classification of pneumonia from chest X-ra
 2.	Differentiating between bacterial and viral pneumonia.
 3.	Expanding to triple classification: normal, bacterial pneumonia, or viral pneumonia.
 ### Why is this Problem Interesting?
-Pneumonia remains a leading cause of death worldwide, particularly in children under five years in undeveloped countries. Rapid and accurate diagnosis can save lives, especially in resource-limited settings where radiologists are rare. Automated classification of chest X-rays using deep learning offers the potential to assist doctors, improve diagnostic accuracy, and expedite treatment decisions.
+Pneumonia remains a leading cause of death worldwide, particularly in children under five years in undeveloped countries. Rapid and accurate diagnosis can save lives, especially in resource-limited settings where radiologists are rare. Automated classification of chest X-rays using deep learning offers the potential to assist doctors, improve diagnostic accuracy, and expedite treatment decisions. 
+
+Furthermore, while most publicly available implementations focus solely on binary classification, distinguishing between normal and pneumonia cases, our work goes a step further by exploring multi-class classification to differentiate between bacterial and viral pneumonia. This is an area with limited prior research or publicly available benchmarks, making our contributions particularly noteworthy in addressing this gap 
 
 ### What is the Approach?
 We employed state-of-the-art deep learning models, including CNNs, ResNets, and DenseNets, for classification. Additionally, we incorporated a GAN-based framework to explore its utility in enhancing triple-class performance.
@@ -103,12 +105,13 @@ Chest X-ray images (anterior-posterior) were selected from retrospective cohorts
 ### Limitations
 1.	Class imbalance, too much bacterial pneumonia data with too little viral pneumonia data, in the dataset affected triple-class classification performance.
 2.	Difficulty in distinguishing bacterial from viral pneumonia due to overlapping radiological features.
+3.	While our models achieved promising results in distinguishing normal cases from pneumonia, the classification of pneumonia types (bacterial vs. viral) remains a significant challenge. The current performance highlights the inherent difficulty in differentiating between these two types, likely due to the subtle radiological differences and potential dataset limitations.
 
 ### Future Work
 1.	Implement attention mechanisms to focus on region-specific features in X-rays.
 2.	Explore pre-training on larger datasets or additional augmentation techniques.
 3.	Collaborate with radiologists to integrate clinical context into the classification pipeline.
-4.	While our models achieved promising results in distinguishing normal cases from pneumonia, the classification of pneumonia types (bacterial vs. viral) remains a significant challenge. The current performance highlights the inherent difficulty in differentiating between these two types, likely due to the subtle radiological differences and potential dataset limitations. Future work will focus on developing more advanced modeling techniques and conducting extensive experiments to address this issue.
+4.	Develop more advanced modeling techniques and conduct extensive experiments to address the classification of pneumonia types (bacterial vs. viral).
 
 ## Conclusion
 This project demonstrates the efficacy of deep learning models for pneumonia classification using chest X-rays. While binary tasks achieve robust performance, multi-class classification remains challenging, highlighting opportunities for further research into feature extraction and augmentation.
