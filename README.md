@@ -3,7 +3,7 @@
 Teammates: Rongjia Sun, Churou Deng
 
 ## Environment Setup
-### required Library
+### Required Library
 torch (version == '2.4.1+cu118')
 
 tensorflow (version == '2.18.0')
