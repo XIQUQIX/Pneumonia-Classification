@@ -1,6 +1,6 @@
 # Application of Chest X-Ray Images on Pneumonia Classification
 ## Project Overview
-Teammates: Rongjia Sun 002811747, Churou Deng 002335883
+Teammates: Rongjia Sun, Churou Deng
 
 ## Environment Setup
 ### Required Library
@@ -50,15 +50,22 @@ Deep learning models excel at image-based classification tasks. CNNs, ResNets, a
 1.	Application for Dummy Class in Transfer Learning
 Introduced a dummy class transfer learning. This approach was used to improve classification performance by providing a distinct class for the unclassified or ambiguous data, helping the model generalize better during training. We integrated this technique with ResNet and DenseNet, although its effectiveness was not as pronounced in the context of pneumonia classification.
 2.	Use of Generative Adversarial Networks (GANs) for Data Augmentation
-To address the data imbalance and enhance model performance, we leveraged GANs for data augmentation. GANs allowed us to generate synthetic pneumonia images, augmenting the existing dataset and improving the robustness of the models.
+To address the data imbalance and enhance model performance, we leveraged GANs for data augmentation. GANs allowed us to generate synthetic pneumonia images, augmenting the existing dataset and improving the robustness of the models. Despite promising applications in other domains, the GAN-generated data did not substantially improve the classification of pneumonia types (bacterial vs. viral), but it proved valuable in maintaining the balance between normal and pneumonia images.
 3.	Incorporation of a Classifier in the GAN Network
-To extend the classification task to a three-class problem (normal, bacterial pneumonia, viral pneumonia), we integrated a classifier within the GAN architecture. The classifier was trained alongside the GAN to categorize images into one of the three categories.
+To extend the classification task to a three-class problem (normal, bacterial pneumonia, viral pneumonia), we integrated a classifier within the GAN architecture. The classifier was trained alongside the GAN to categorize images into one of the three categories. While this approach balanced the overall performance, the distinction between bacterial and viral pneumonia remained challenging. This indicates that the task might require additional features beyond those captured in the current datasets or architectures.
 4.	Application of Multiple Datasets
-By combining these datasets, we were able to evaluate the models across various conditions, enabling a more comprehensive understanding of how the models perform under different scenarios. 
+By combining these datasets, we were able to evaluate the models across various conditions, enabling a more comprehensive understanding of how the models perform under different scenarios.
+5.  Improvements in CNN Training with Gradient Stabilization
+While training CNNs for binary and triple classification tasks, we encountered the vanishing gradient problem, particularly in deeper networks. This issue hindered the training process and led to slow convergence. To address this, we employed techniques such as Batch Normalization, which normalizes layer inputs to stabilize the learning process, and ReLU activation functions, which mitigate gradient shrinkage by introducing non-linearity. These adjustments significantly improved the gradient flow and accelerated convergence, enabling the CNN models to better differentiate between normal, bacterial, and viral pneumonia. These methods contributed to achieving baseline performance before integrating more complex architectures and GAN-based augmentation. 
 
 ## Experiment Setup
 ### Dataset
 We used two datasets from Kaggle:
+
+The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
+
+Chest X-ray images (anterior-posterior) were selected from retrospective cohorts of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. All chest X-ray imaging was performed as part of patients’ routine clinical care.
+
 1.	Chest X-Ray Images (Pneumonia) [1]
 2.	Pediatric Pneumonia Chest X-Rays [2]
 ### Statistics
@@ -66,7 +73,7 @@ We used two datasets from Kaggle:
 2. Class distribution: Normal, Bacterial Pneumonia, Viral Pneumonia.
 ### Implementation
 1. Frameworks: PyTorch and TensorFlow for model implementation.
-2. Models: CNN, ResNet, DenseNet, and GAN.
+2. Models: CNN, ResNet, DenseNet, and GAN with classifiers.
 3. Hardware: Experiments were conducted on a GPU-enabled machine.
 ### Model Architectures
 1.	CNN: Sequential convolutional layers with ReLU activations and max pooling.
