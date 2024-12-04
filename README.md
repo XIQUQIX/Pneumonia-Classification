@@ -1,6 +1,6 @@
 # Application of Chest X-Ray Images on Pneumonia Classification
 ## Project Overview
-Teammates: Rongjia Sun, Churou Deng
+Teammates: Rongjia Sun 002811747, Churou Deng 002335883
 
 ## Environment Setup
 ### Required Library
