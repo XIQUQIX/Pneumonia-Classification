@@ -22,12 +22,12 @@ matplotlib
 
 ## How to use
 1. Prepare an environment with Jupyter Notebook and above libraries
-2. Download dataset in dataset file or at [https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia] and [https://www.kaggle.com/datasets/andrewmvd/pediatric-pneumonia-chest-xray]
-3. Run CNN/CNN.ipynb or CNN/CNN_bin_classifier.ipynb to implement CNN for binary classification between normal and pneumonia on dataset chest-xray-pneumonia
-4. Run Transfer_Learning/Transfer_Learning_dense.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset chest-xray-pneumonia
-5. Run Transfer_Learning/Transfer_Learning_dense_pediatric.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset pediatric-pneumonia-chest-xray
-6. Run Transfer_Learning/Transfer_Learning_res.ipynb to implement ResNet for binary classification between bacterial and viral pneumonia on both chest-xray-pneumonia and pediatric-pneumonia-chest-xray
-7. Run GAN/GAN_tri_classifier.ipynb to implement GAN for triple classification among normal, bacterial pneumonia, and viral pneumonia on dataset chest-xray-pneumonia
+2. Download dataset in dataset file or at [https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia] and [https://www.kaggle.com/datasets/andrewmvd/pediatric-pneumonia-chest-xray].
+3. Run CNN/CNN.ipynb or CNN/CNN_bin_classifier.ipynb to implement CNN for binary classification between normal and pneumonia on dataset chest-xray-pneumonia.
+4. Run Transfer_Learning/Transfer_Learning_dense.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset chest-xray-pneumonia.
+5. Run Transfer_Learning/Transfer_Learning_dense_pediatric.ipynb to implement denseNet for binary classification between bacterial and viral pneumonia on dataset pediatric-pneumonia-chest-xray.
+6. Run Transfer_Learning/Transfer_Learning_res.ipynb to implement ResNet for binary classification between bacterial and viral pneumonia on both chest-xray-pneumonia and pediatric-pneumonia-chest-xray.
+7. Run GAN/GAN_tri_classifier.ipynb to implement GAN for triple classification among normal, bacterial pneumonia, and viral pneumonia on dataset chest-xray-pneumonia.
 
 ## Abstract
 This project explores deep learning techniques for classifying pneumonia using chest X-ray images. Initially, convolutional neural networks (CNNs) were employed to distinguish between normal and pneumonia cases. Subsequently, ResNet and DenseNet were utilized to classify bacterial versus viral pneumonia. Experiments were extended to a three-class problem (normal, bacterial, and viral), with the addition of GAN to enhance classification performance. While GAN slightly improved normal versus pneumonia classification, it did not significantly improve pneumonia type differentiation. The findings underscore the challenges of triple classification while validating CNN-based approaches for binary tasks.
